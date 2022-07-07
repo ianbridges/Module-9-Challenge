@@ -2,52 +2,54 @@
 import inquirer from "inquirer";
 import fs from "fs"
 import generateMarkdown from "./utils/generateMarkdown";
+import Choices from "inquirer/lib/objects/choices";
 // TODO: Create an array of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Title your readme'
+        message: 'Title your readme?'
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'Title your readme'
+        name: 'description',
+        message: 'Enter project description.'
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'Title your readme'
+        name: 'installation',
+        message: 'Enter intall instructions.'
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'Title your readme'
+        name: 'usage',
+        message: 'Describe the use.'
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'Title your readme'
+        name: 'license',
+        message: 'Pick license',
+        choices: ['Boost', 'BSD', 'Apcache']
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'Title your readme'
+        name: 'contributers',
+        message: 'List contributers.'
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'Title your readme'
+        name: 'tests',
+        message: 'App tests?'
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'Title your readme'
+        name: 'github',
+        message: 'Github link.'
     },
     {
         type: 'input',
-        name: 'title',
-        message: 'Title your readme'
+        name: 'email',
+        message: 'Email here.'
     },
 ];
 
