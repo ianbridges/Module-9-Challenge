@@ -1,8 +1,7 @@
 /* Packages needed for this Application */
-import inquirer from "inquirer";
-import fs from "fs"
-import generateMarkdown from "./utils/generateMarkdown";
-import Choices from "inquirer/lib/objects/choices";
+let inquirer = require( "inquirer");
+let fs = require( "fs");
+let generateMarkdown = require( "./utils/generateMarkdown");
 
 
 /* Prompt Questions Array Start */
