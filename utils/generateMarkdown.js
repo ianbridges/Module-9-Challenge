@@ -14,7 +14,17 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+    if (license === 'Eclipse') {
+        return "[  Eclipse](https://www.eclipse.org/legal/epl-2.0/)";
+    } else if (license === 'IBM') {
+        return "[  IBM](https://www.ibm.com/about/software-licensing/licensing/license_information_documents)";
+    } else if (license === 'MIT') {
+        return "[  MIT](https://opensource.org/licenses/MIT)";
+    } else {
+        return "";
+    }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
