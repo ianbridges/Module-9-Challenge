@@ -1,9 +1,11 @@
-// TODO: Include packages needed for this application
+/* Packages needed for this Application */
 import inquirer from "inquirer";
 import fs from "fs"
 import generateMarkdown from "./utils/generateMarkdown";
 import Choices from "inquirer/lib/objects/choices";
-// TODO: Create an array of questions for user input
+
+
+/* Prompt Questions Array Start */
 const questions = [
     {
         type: 'input',
@@ -52,8 +54,10 @@ const questions = [
         message: 'Email here.'
     },
 ];
+/* Prompt Questions Array End */
 
-// TODO: Create a function to write README file
+
+/* README Writing Function Start */
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => {
         if (err) {
@@ -62,8 +66,10 @@ function writeToFile(fileName, data) {
         console.log("Readme Completed")
     })
 };
+/* README Writing Function End */
 
-// TODO: Create a function to initialize app
+
+/* Initializing Function Start */
 function init() {
     inquirer.prompt(questions)
         .then((answers) => {
@@ -78,6 +84,8 @@ function init() {
             }
         });
 }
+/* Initializing Function End */
+
 
 // Function call to initialize app
 init();
