@@ -79,4 +79,4 @@ function generateMarkdown(data) {
 /* Function that Generates Markdown for README End */
 
 
-module.export = generateMarkdown;
+module.exports = generateMarkdown;
