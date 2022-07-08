@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+/* Function that Displays Licensing Badge Start */
 function renderLicenseBadge(license) {
     if (license === 'Eclipse') {
         return "![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)";
@@ -11,9 +10,11 @@ function renderLicenseBadge(license) {
         return '';
     }
 }
+/* Function that Displays Licensing Badge End */
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+
+
+/* Function that Returns License Link Start */
 function renderLicenseLink(license) {
     if (license === 'Eclipse') {
         return "[  Eclipse](https://www.eclipse.org/legal/epl-2.0/)";
@@ -25,9 +26,10 @@ function renderLicenseLink(license) {
         return "";
     }
 }
+/* Function that Returns License Link Start */
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+
+/* Function that Returns License Section of README Start */
 function renderLicenseSection(license) {
     if (license) {
         return "<h2> License </h2>\n" + renderLicenseBadge(license) + renderLicenseLink(license);
@@ -35,8 +37,10 @@ function renderLicenseSection(license) {
         return "";
     }
 }
+/* Function that Returns License Section of README Start */
 
-// TODO: Create a function to generate markdown for README
+
+/* Function that Generates Markdown for README Start */
 function generateMarkdown(data) {
   return "## <h1>" + data.title + "</h1>" +
     renderLicenseSection(data.license) +
@@ -72,5 +76,7 @@ function generateMarkdown(data) {
     "<h2>Email</h2>" +
     "<p>" + data.email + "</p>";
 }
+/* Function that Generates Markdown for README End */
+
 
 export default generateMarkdown;
