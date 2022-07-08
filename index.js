@@ -1,9 +1,7 @@
 /* Packages needed for this Application */
-let inquirer = require( "inquirer");
-let fs = require( "fs");
-let generateMarkdown = require( "./utils/generateMarkdown");
-
-
+let inquirer = require("inquirer");
+let fs = require("fs");
+let generateMarkdown = require("./utils/generateMarkdown");
 /* Prompt Questions Array Start */
 const questions = [
     {
@@ -27,10 +25,10 @@ const questions = [
         message: 'Describe the use.'
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Pick license',
-        choices: ['Eclipse', 'IBM', 'MIT']
+        choices: ['Eclipse','IBM','MIT']
     },
     {
         type: 'input',
@@ -72,14 +70,15 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
         .then((answers) => {
+            console.log(answers)
             var data = generateMarkdown(answers);
             writeToFile("README.md", data)
         })
         .catch((error) => {
             if (error.isTtyError) {
-                
+
             } else {
-                
+
             }
         });
 }
